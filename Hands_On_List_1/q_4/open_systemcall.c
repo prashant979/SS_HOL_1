@@ -4,7 +4,7 @@
 
 int main() {
 	int fd;
-	fd = open("test.txt", O_RDWR);
+	fd = open("test.txt", O_RDWR | O_CREAT | O_EXCL, 0644);
 	if (fd == -1) {
 		perror("Open");
 	} else {
