@@ -1,0 +1,5 @@
+ps -o pid,ni,pri,cmd -p <PID>
+nice -n 10 ./program
+renice 10 -p <PID>
+Need permission to decrease priority:  sudo renice -10 -p <PID>
+Running program in background:  ./program &
